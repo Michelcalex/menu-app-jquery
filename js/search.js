@@ -24,7 +24,7 @@ function searchBox() {
             keepers.push(menu.items[i]);
         }
     }
-    menu.showMenu(keepers);
+    menu.showMenu(keepers, '#menu-list');
 });
 }
 

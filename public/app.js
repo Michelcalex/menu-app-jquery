@@ -10,10 +10,7 @@ let veggie = require('./veggie');
 window.addEventListener('load', function() {
     console.log('I am working');
 
-    $('#tabs').tabs({
-        active: 0
-        }
-    );
+    $('#tabs').tabs();
 
     
 
@@ -34,13 +31,14 @@ window.addEventListener('load', function() {
     // });
 
     food.getFoods();
-    menu.showMenu(menu.items);
+    menu.showMenu(menu.items, '#menu-list');
     search.searchBox();
-    veggie;
-    console.log(veggie);
+    veggie.showVeggies();
 });
 },{"./food":2,"./menu":3,"./search":4,"./veggie":5}],2:[function(require,module,exports){
 let menu = require('./menu');
+let veggie = require('./veggie');
+
 
 function getFoods() {
     let submitBtn = document.querySelector('#submit-btn');
@@ -59,7 +57,8 @@ function getFoods() {
         };
         
         menu.addItem(newItem);
-        menu.showMenu(menu.items);
+        menu.showMenu(menu.items, '#menu-list');
+        veggie.showVeggies();
 
         foodName.value = '';
         foodDescription.value = '';
@@ -101,15 +100,15 @@ module.exports = {
 //         foodPrice.value= '';
 //     });
 // }
-},{"./menu":3}],3:[function(require,module,exports){
+},{"./menu":3,"./veggie":5}],3:[function(require,module,exports){
 let items = [
     {name: 'Cheese Pizza', description: 'Dangerously cheezy', category: 'yummy', price: 5.99},
     {name: 'Chicken Noodle Soup', description: 'With a soda on the side', category: 'healthy', price: 10.99},
     {name: 'Frenchy Fries', description: 'Potatoe that are cut', category: 'vegetarian', price: 3.99}
 ];
 
-function showMenu(param) {
-    let menuList = document.querySelector('#menu-list');
+function showMenu(param, selector) {
+    let menuList = document.querySelector(selector);
     menuList.innerHTML='';
     
     for (let i = 0; i < param.length; i++) {
@@ -165,7 +164,7 @@ function searchBox() {
             keepers.push(menu.items[i]);
         }
     }
-    menu.showMenu(keepers);
+    menu.showMenu(keepers, '#menu-list');
 });
 }
 
@@ -185,11 +184,41 @@ module.exports = {
 let menu = require('./menu');
 
 
-let veggieFood = [
-    {name: 'Spinach Enchiladas', description: 'really delicious', category: 'vegetarian', price: 4.59},
-    {name: 'Homemade Veggie Pizza', description: 'really delicious', category: 'vegetarian', price: 4.59},
-    {name: 'Amazing Simple Thai Tofu', description: 'really delicious', category: 'vegetarian', price: 4.59},
-]
+// let veggieFood = [
+//     {name: 'Spinach Enchiladas', description: 'really delicious', category: 'vegetarian', price: 4.59},
+//     {name: 'Homemade Veggie Pizza', description: 'really delicious', category: 'vegetarian', price: 4.59},
+//     {name: 'Amazing Simple Thai Tofu', description: 'really delicious', category: 'vegetarian', price: 4.59},
+// ]
 
-module.exports = veggieFood;
+
+
+function showVeggies() {
+    let veggieItem = document.querySelector('#veggie-list');
+
+    let veggieFood = menu.items.filter(function(food) {
+        if(food.category === 'Vegetarian') {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    //Good ole for loop
+    // for(let i = 0; i <menu.items.length; i++) {
+    //     if(menu.items[i].category === 'vegetarian') {
+    //         veggieFood.push(menu.items[i]);
+    //     }
+    // }
+
+    menu.showMenu(veggieFood, '#veggie-list');
+    
+
+}
+
+
+
+
+module.exports = {
+    showVeggies: showVeggies,
+};
 },{"./menu":3}]},{},[1]);

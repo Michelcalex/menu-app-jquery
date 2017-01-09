@@ -1,4 +1,6 @@
 let menu = require('./menu');
+let veggie = require('./veggie');
+
 
 function getFoods() {
     let submitBtn = document.querySelector('#submit-btn');
@@ -17,7 +19,8 @@ function getFoods() {
         };
         
         menu.addItem(newItem);
-        menu.showMenu(menu.items);
+        menu.showMenu(menu.items, '#menu-list');
+        veggie.showVeggies();
 
         foodName.value = '';
         foodDescription.value = '';

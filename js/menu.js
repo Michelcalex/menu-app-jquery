@@ -4,8 +4,8 @@ let items = [
     {name: 'Frenchy Fries', description: 'Potatoe that are cut', category: 'vegetarian', price: 3.99}
 ];
 
-function showMenu(param) {
-    let menuList = document.querySelector('#menu-list');
+function showMenu(param, selector) {
+    let menuList = document.querySelector(selector);
     menuList.innerHTML='';
     
     for (let i = 0; i < param.length; i++) {

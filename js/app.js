@@ -9,10 +9,7 @@ let veggie = require('./veggie');
 window.addEventListener('load', function() {
     console.log('I am working');
 
-    $('#tabs').tabs({
-        active: 0
-        }
-    );
+    $('#tabs').tabs();
 
     
 
@@ -33,8 +30,7 @@ window.addEventListener('load', function() {
     // });
 
     food.getFoods();
-    menu.showMenu(menu.items);
+    menu.showMenu(menu.items, '#menu-list');
     search.searchBox();
-    veggie;
-    console.log(veggie);
+    veggie.showVeggies();
 });
