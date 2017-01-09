@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://use.fontawesome.com/7fb1b7bdac.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script id="food-list-template" type="x-mustache-template">
         <p class="name-food">{{ name }}</p>
@@ -16,16 +18,18 @@
         <p>${{ price }}</p>
     </script>
 </head>
-<body>
+<body id="tabs">
     <header>
         <nav>
             <div id="logo-nav">
                 <img src="../assets/nomnomlogo.png" alt="nom-nom-logo">
                 <h1>Nom Nom</h1>
             </div>
-            <div id="right-nav">
-                <button id="view-menu">View Menu</button>
-                <button id="add-food">Add Food</button>
+            <div>
+                <ul>
+                    <li id="view-menu"><a href="#show-menu">View Menu</a></li>
+                    <li id="add-food"><a href="#create-menu">Add Food</a></li>
+                </ul>
             <div>
         </nav>
     </header>

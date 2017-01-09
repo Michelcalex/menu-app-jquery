@@ -24,13 +24,26 @@ header {
             }
         }
 
-        #right-nav {
+        ul {
+            display: flex;
+            padding: 0;
 
-            button {
+            li {
+                list-style: none;
                 background-color: $button-background-color;
                 color: $button-text-color;
                 padding: 10px;
-            }
+                border-radius: $border-radius;
+                margin-left: 12px;
+
+                a {
+                    text-decoration: none;
+                    color: $text-highlight-secondary-color;
+                }
+            }   
         }
     }
 }
+
+
+                

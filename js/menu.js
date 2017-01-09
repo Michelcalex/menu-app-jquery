@@ -1,7 +1,6 @@
 let items = [];
 
 function showMenu(param) {
-    console.log(param);
     let menuList = document.querySelector('#menu-list');
     menuList.innerHTML='';
     

@@ -9,20 +9,23 @@ let search = require('./search');
 window.addEventListener('load', function() {
     console.log('I am working');
 
-    let addFoodBtn = document.querySelector('#add-food');
-    let viewMenuBtn = document.querySelector('#view-menu');
-    let createMenuSection = document.querySelector('#create-menu');
-    let showMenuSection = document.querySelector('#show-menu');
+    $('#tabs').tabs();
 
-    addFoodBtn.addEventListener('click', function() {
-        createMenuSection.className = '';
-        showMenuSection.classList.add('hidden');
-    });
+    // let addFoodBtn = document.querySelector('#add-food');
+    // let viewMenuBtn = document.querySelector('#view-menu');
+    // let createMenuSection = document.querySelector('#create-menu');
+    // let showMenuSection = document.querySelector('#show-menu');
 
-    viewMenuBtn.addEventListener('click', function() {
-        showMenuSection.className = '';
-        createMenuSection.classList.add('hidden');
-    });
+
+    // addFoodBtn.addEventListener('click', function() {
+    //     createMenuSection.className = '';
+    //     showMenuSection.classList.add('hidden');
+    // });
+
+    // viewMenuBtn.addEventListener('click', function() {
+    //     showMenuSection.className = '';
+    //     createMenuSection.classList.add('hidden');
+    // });
 
     food.getFoods();
     menu.showMenu(menu.items);
@@ -91,7 +94,6 @@ module.exports = {
 let items = [];
 
 function showMenu(param) {
-    console.log(param);
     let menuList = document.querySelector('#menu-list');
     menuList.innerHTML='';
     
