@@ -9,7 +9,12 @@ let search = require('./search');
 window.addEventListener('load', function() {
     console.log('I am working');
 
-    $('#tabs').tabs();
+    $('#tabs').tabs({
+        active: 0
+        }
+    );
+
+    
 
     // let addFoodBtn = document.querySelector('#add-food');
     // let viewMenuBtn = document.querySelector('#view-menu');
