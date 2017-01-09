@@ -5,6 +5,7 @@
 let food = require('./food');
 let menu = require('./menu');
 let search = require('./search');
+let veggie = require('./veggie');
 
 window.addEventListener('load', function() {
     console.log('I am working');
@@ -35,8 +36,10 @@ window.addEventListener('load', function() {
     food.getFoods();
     menu.showMenu(menu.items);
     search.searchBox();
+    veggie;
+    console.log(veggie);
 });
-},{"./food":2,"./menu":3,"./search":4}],2:[function(require,module,exports){
+},{"./food":2,"./menu":3,"./search":4,"./veggie":5}],2:[function(require,module,exports){
 let menu = require('./menu');
 
 function getFoods() {
@@ -45,11 +48,13 @@ function getFoods() {
     submitBtn.addEventListener('click', function() {
         let foodName = document.querySelector('#food-name');
         let foodDescription = document.querySelector('#food-description');
+        let foodCategory = document.querySelector('#category');
         let foodPrice = document.querySelector('#price');
 
         let newItem = {
             name: foodName.value[0].toUpperCase() + foodName.value.slice(1).toLowerCase(),
             description: foodDescription.value[0].toUpperCase() + foodDescription.value.slice(1).toLowerCase(),
+            category: foodCategory.value[0].toUpperCase() + foodCategory.value.slice(1).toLowerCase(),
             price: foodPrice.value,
         };
         
@@ -58,6 +63,7 @@ function getFoods() {
 
         foodName.value = '';
         foodDescription.value = '';
+        foodCategory.value = '';
         foodPrice.value = '';
     });
 }
@@ -96,7 +102,11 @@ module.exports = {
 //     });
 // }
 },{"./menu":3}],3:[function(require,module,exports){
-let items = [];
+let items = [
+    {name: 'Cheese Pizza', description: 'Dangerously cheezy', category: 'yummy', price: 5.99},
+    {name: 'Chicken Noodle Soup', description: 'With a soda on the side', category: 'healthy', price: 10.99},
+    {name: 'Frenchy Fries', description: 'Potatoe that are cut', category: 'vegetarian', price: 3.99}
+];
 
 function showMenu(param) {
     let menuList = document.querySelector('#menu-list');
@@ -109,6 +119,7 @@ function showMenu(param) {
             {
                 name: param[i].name, 
                 description: param[i].description,
+                category: param[i].category,
                 price: param[i].price,
             }
         );
@@ -164,4 +175,21 @@ function searchBox() {
 module.exports = {
     searchBox: searchBox,
 };
+},{"./menu":3}],5:[function(require,module,exports){
+//STEPS:
+//Iterate through menu items
+//if the category is 'vegetarian', push to a new array
+//display new array in DOM
+
+
+let menu = require('./menu');
+
+
+let veggieFood = [
+    {name: 'Spinach Enchiladas', description: 'really delicious', category: 'vegetarian', price: 4.59},
+    {name: 'Homemade Veggie Pizza', description: 'really delicious', category: 'vegetarian', price: 4.59},
+    {name: 'Amazing Simple Thai Tofu', description: 'really delicious', category: 'vegetarian', price: 4.59},
+]
+
+module.exports = veggieFood;
 },{"./menu":3}]},{},[1]);

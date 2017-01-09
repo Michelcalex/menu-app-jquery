@@ -4,6 +4,7 @@
 let food = require('./food');
 let menu = require('./menu');
 let search = require('./search');
+let veggie = require('./veggie');
 
 window.addEventListener('load', function() {
     console.log('I am working');
@@ -34,4 +35,6 @@ window.addEventListener('load', function() {
     food.getFoods();
     menu.showMenu(menu.items);
     search.searchBox();
+    veggie;
+    console.log(veggie);
 });

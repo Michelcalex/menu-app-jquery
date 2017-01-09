@@ -1,4 +1,8 @@
-let items = [];
+let items = [
+    {name: 'Cheese Pizza', description: 'Dangerously cheezy', category: 'yummy', price: 5.99},
+    {name: 'Chicken Noodle Soup', description: 'With a soda on the side', category: 'healthy', price: 10.99},
+    {name: 'Frenchy Fries', description: 'Potatoe that are cut', category: 'vegetarian', price: 3.99}
+];
 
 function showMenu(param) {
     let menuList = document.querySelector('#menu-list');
@@ -11,6 +15,7 @@ function showMenu(param) {
             {
                 name: param[i].name, 
                 description: param[i].description,
+                category: param[i].category,
                 price: param[i].price,
             }
         );

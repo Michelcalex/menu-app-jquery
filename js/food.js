@@ -6,11 +6,13 @@ function getFoods() {
     submitBtn.addEventListener('click', function() {
         let foodName = document.querySelector('#food-name');
         let foodDescription = document.querySelector('#food-description');
+        let foodCategory = document.querySelector('#category');
         let foodPrice = document.querySelector('#price');
 
         let newItem = {
             name: foodName.value[0].toUpperCase() + foodName.value.slice(1).toLowerCase(),
             description: foodDescription.value[0].toUpperCase() + foodDescription.value.slice(1).toLowerCase(),
+            category: foodCategory.value[0].toUpperCase() + foodCategory.value.slice(1).toLowerCase(),
             price: foodPrice.value,
         };
         
@@ -19,6 +21,7 @@ function getFoods() {
 
         foodName.value = '';
         foodDescription.value = '';
+        foodCategory.value = '';
         foodPrice.value = '';
     });
 }

@@ -15,6 +15,7 @@
     <script id="food-list-template" type="x-mustache-template">
         <p class="name-food">{{ name }}</p>
         <p class="name-description">{{ description }}</p>
+        <p>{{ category }}</p>
         <p>${{ price }}</p>
     </script>
 </head>
@@ -54,6 +55,8 @@
                     <input type="text" name="food-name" id="food-name"><br>
                     Description:<br>
                     <input type="text" name="food-description" id="food-description"><br>
+                    Category:<br>
+                    <input type="text" name="food-category" id="category"><br>
                     Price:<br>
                     <input type="number" name="quantity" id="price"><br>
                     <input type="button" value="submit" id="submit-btn">
