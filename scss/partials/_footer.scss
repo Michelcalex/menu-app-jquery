@@ -1,0 +1,15 @@
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    background-color: $navigation-background-color;
+    font-size:12px;
+    text-align: center;
+    padding: 20px 0px;
+
+    p {
+        margin: 2px 0px;
+    }
+}

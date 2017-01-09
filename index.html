@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nom Nom</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Armata|Frijole" rel="stylesheet">
+    <link rel="icon" href="../assets/nomnom-favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/7fb1b7bdac.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.min.js"></script>
+    <script src="app.js"></script>
+    <script id="food-list-template" type="x-mustache-template">
+        <p class="name-food">{{ name }}</p>
+        <p class="name-description">{{ description }}</p>
+        <p>${{ price }}</p>
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo-nav">
+                <img src="../assets/nomnomlogo.png" alt="nom-nom-logo">
+                <h1>Nom Nom</h1>
+            </div>
+            <div id="right-nav">
+                <button id="view-menu">View Menu</button>
+                <button id="add-food">Add Food</button>
+            <div>
+        </nav>
+    </header>
+    <main>
+        <section id="show-menu">
+            <h2>Get your grub on!</h2>
+            <div>
+                <h3>Menu</h3>
+                <div id="search-container">
+                    <input type="text" placeholder="Search..." id="search-bar" maxlength="25" autocomplete="on">
+                    <input type="button" value="submit" id="search-btn">
+                </div>
+                <ul id="menu-list"></ul>
+            </div>
+        </section>
+        <section id="create-menu" class="hidden">
+            <h2>What's cooking?</h2>
+            <div>
+                <form>
+                    Name of food:<br>
+                    <input type="text" name="food-name" id="food-name"><br>
+                    Description:<br>
+                    <input type="text" name="food-description" id="food-description"><br>
+                    Price:<br>
+                    <input type="number" name="quantity" id="price"><br>
+                    <input type="button" value="submit" id="submit-btn">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Nom Nom, Inc. <i class="fa fa-cutlery" aria-hidden="true"></i>
+</p>
+        <p>Charlotte, North Carolina</p>
+    </footer>
+</body>
+</html>

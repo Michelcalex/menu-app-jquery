@@ -1,0 +1,52 @@
+#show-menu {
+
+    div {
+        @include grid-row();
+        background-color: $background-primary-color;
+        border-radius: $border-radius;
+
+        h3{
+            text-align: center;
+            color: $text-highlight-secondary-color;
+            font-family: $sub-heading-font;
+            font-size: 1.6em;
+            margin-bottom: 0px;
+        }
+
+        #search-container {
+            text-align: center;
+            padding: 2%;
+
+            #search-btn {
+                background-color: $button-background-secondary-color;
+                color: $button-text-color;
+                border-radius: $border-radius;
+            }
+        }
+
+        ul {
+            @include grid-row();
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                @include grid-column(4);
+                background-color: $background-secondary-color;
+                width: 25%;
+                margin: 20px;
+                border-radius: $border-radius;
+
+                .name-food {
+                    font-weight: bold;
+                }
+
+                .name-description {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

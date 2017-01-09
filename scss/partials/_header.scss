@@ -1,0 +1,36 @@
+header {
+    @include grid-row();
+    background-color: $navigation-background-color;
+    max-width: 100%;
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+
+        #logo-nav {
+            display: flex;
+            align-items: center;
+
+            img {
+                padding: 0 10px;
+            }
+
+            h1 {
+                color: $text-secondary-color;
+                font-family: $heading-font;
+                font-weight: normal;
+            }
+        }
+
+        #right-nav {
+
+            button {
+                background-color: $button-background-color;
+                color: $button-text-color;
+                padding: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import '../../../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+$text-primary-color: #1E2732;
+$text-secondary-color: #2B3B4C;
+$text-highlight-color: #FF6F4F;
+$text-highlight-secondary-color: #FFFEF7;
+
+$heading-font: 'Frijole', cursive;
+$sub-heading-font: 'Frijole', cursive;
+$primary-text-font: 'Armata', sans-serif;
+
+$background-primary-color: #2B3B4C;
+$background-secondary-color: #DCD9C8;
+
+$navigation-background-color: #DCD9C8;
+
+$button-background-color: #2B3B4C;
+$button-background-secondary-color: #FF6F4F;
+$button-text-color: #FFFEF7;
+
+$border-radius: 5px;
+
+
+body {
+    color: $text-primary-color;
+    font-family: $primary-text-font;
+}
+
+button {
+    border-radius: $border-radius;
+}
+
+.hidden{
+    display: none;
+}
+
+h2 {
+    @include grid-row();
+    max-width: 100%;
+    color: $text-highlight-color;
+    text-align: center;
+    padding: 50px 0px;
+    margin: 0;
+    font-family: $sub-heading-font;
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+
+
+
+@import 'partials/header';
+@import 'partials/menu';
+@import 'partials/createmenu';
+@import 'partials/footer';
