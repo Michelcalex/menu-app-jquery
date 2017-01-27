@@ -1322,7 +1322,7 @@ header {
   margin-left: auto;
   background-color: #2B3B4C;
   border-radius: 5px;
-  margin-bottom: 10%; }
+  margin-bottom: 5%; }
   #show-menu div::before, #show-menu div::after {
     display: table;
     content: ' '; }
@@ -1408,3 +1408,44 @@ footer {
   padding: 20px 0px; }
   footer p {
     margin: 2px 0px; }
+
+#vegetarian-menu div {
+  background-color: #2B3B4C;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 5px;
+  margin-bottom: 10%; }
+  #vegetarian-menu div ul {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    #vegetarian-menu div ul::before, #vegetarian-menu div ul::after {
+      display: table;
+      content: ' '; }
+    #vegetarian-menu div ul::after {
+      clear: both; }
+    #vegetarian-menu div ul li {
+      width: 33.33333%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      background-color: #DCD9C8;
+      width: 25%;
+      margin: 20px;
+      border-radius: 5px; }
+      @media print, screen and (min-width: 40em) {
+        #vegetarian-menu div ul li {
+          padding-right: 0.9375rem;
+          padding-left: 0.9375rem; } }
+      #vegetarian-menu div ul li:last-child:not(:first-child) {
+        float: right; }
+      #vegetarian-menu div ul li .name-food {
+        font-weight: bold; }
+      #vegetarian-menu div ul li .name-description {
+        font-style: italic; }
