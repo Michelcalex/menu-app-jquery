@@ -4,6 +4,7 @@
         @include grid-row();
         background-color: $background-primary-color;
         border-radius: $border-radius;
+        margin-bottom: 10%;
 
         h3{
             text-align: center;
