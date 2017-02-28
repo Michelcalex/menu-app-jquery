@@ -46,6 +46,15 @@ h2 {
     font-size: 1.8em;
 }
 
+h3 {
+    text-align: center;
+    color: $text-highlight-secondary-color;
+    font-family: $sub-heading-font;
+    font-size: 1.6em;
+    margin-bottom: 0px;
+    font-weight: 100;
+}
+
 @import 'partials/header';
 @import 'partials/menu';
 @import 'partials/createmenu';

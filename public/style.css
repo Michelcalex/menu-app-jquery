@@ -1277,6 +1277,14 @@ h2 {
   h2::after {
     clear: both; }
 
+h3 {
+  text-align: center;
+  color: #FFFEF7;
+  font-family: "Frijole", cursive;
+  font-size: 1.6em;
+  margin-bottom: 0px;
+  font-weight: 100; }
+
 header {
   max-width: 75rem;
   margin-right: auto;
@@ -1328,12 +1336,6 @@ header {
     content: ' '; }
   #show-menu div::after {
     clear: both; }
-  #show-menu div h3 {
-    text-align: center;
-    color: #FFFEF7;
-    font-family: "Frijole", cursive;
-    font-size: 1.6em;
-    margin-bottom: 0px; }
   #show-menu div #search-container {
     text-align: center;
     padding: 2%; }
