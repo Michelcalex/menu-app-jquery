@@ -102,9 +102,9 @@ module.exports = {
 // }
 },{"./menu":3,"./veggie":5}],3:[function(require,module,exports){
 let items = [
-    {name: 'Cheese Pizza', description: 'Dangerously cheezy', category: 'yummy', price: 5.99},
-    {name: 'Chicken Noodle Soup', description: 'With a soda on the side', category: 'healthy', price: 10.99},
-    {name: 'Frenchy Fries', description: 'Potatoe that are cut', category: 'vegetarian', price: 3.99}
+    {name: 'Cheese Pizza', description: 'Dangerously cheezy', category: 'italian', price: 10.99},
+    {name: 'Chicken Noodle Soup', description: 'With a soda on the side', category: 'liquids', price: 5.99},
+    {name: 'Oh My Taco', description: 'Black bean and salsa tacos', category: 'mexican', price: 7.99}
 ];
 
 function showMenu(param, selector) {
